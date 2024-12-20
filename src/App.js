@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
-import Profile from './components/Profil'; 
+import Profile from './components/Profil';  // Türkçe adla dosya varsa
 
 function App() {
   return (

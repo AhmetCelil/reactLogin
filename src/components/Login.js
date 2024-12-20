@@ -10,11 +10,18 @@ function Login() {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:8091/kullanici-giris/giris-yap', {
-        email,
-        kullaniciSifre: password,
-    
-      });
+      const response = await axios.post(
+        'http://localhost:8091/kullanici-giris/giris-yap',
+        {
+          email,
+          kullaniciSifre: password,
+        },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
 
       const token = response.data;
 
